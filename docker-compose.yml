@@ -1,9 +1,6 @@
 services:
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: agilis-api
+    image: smokeeaasd/agilis-api:v1
     ports:
       - "3000:3000"
     env_file:
