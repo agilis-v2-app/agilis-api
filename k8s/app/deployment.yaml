@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: typescript-api-starter
+  name: agilis-api
   labels:
-    app: typescript-api-starter
+    app: agilis-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: typescript-api-starter
+      app: agilis-api
   template:
     metadata:
       labels:
-        app: typescript-api-starter
+        app: agilis-api
     spec:
       containers:
-        - name: typescript-api-starter
-          image: typescript-template:latest
+        - name: agilis-api
+          image: smokeeaasd/agilis-api:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
@@ -24,4 +24,4 @@ spec:
             - name: NODE_ENV
               value: production
             - name: MONGO_URI
-              value: mongodb://mongo:27017/typescript-api-starter
+              value: mongodb://mongo:27017/agilis-api
