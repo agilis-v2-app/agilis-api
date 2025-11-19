@@ -1,5 +1,5 @@
 {
-  "name": "agilis-v2-api",
+  "name": "agilis-api",
   "private": true,
   "type": "module",
   "main": "./dist/index.mjs",
