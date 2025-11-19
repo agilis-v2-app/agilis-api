@@ -1,0 +1,63 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+
+    // For nodejs:
+    "lib": ["esnext"],
+    "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    "noImplicitAny": false,
+
+    // Recommended Options
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"],
+
+      "@models/*": ["./src/models/*"],
+      "@models": ["./src/models"],
+
+      "@controllers/*": ["./src/http/controllers/*"],
+      "@controllers": ["./src/http/controllers"],
+
+      "@middlewares/*": ["./src/http/middlewares/*"],
+      "@middlewares": ["./src/http/middlewares"],
+
+      "@routes/*": ["./src/http/routes/*"],
+      "@routes": ["./src/http/routes"],
+
+      "@validations/*": ["./src/http/validations/*"],
+      "@validations": ["./src/http/validations"]
+    }
+  }
+}

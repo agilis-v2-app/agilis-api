@@ -1,0 +1,13 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".env": ".env*, .env.*",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "tsconfig.json": "tsconfig.*.json",
+    "README.md": "LICENSE",
+    ".gitignore": ".gitattributes, .gitmodules, .gitkeep, .gitmessage, .gitconfig",
+    "Dockerfile": "docker-compose.yml, .dockerignore",
+    "eslint.config.mts": ".prettierrc"
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: typescript-api-starter
+  labels:
+    app: typescript-api-starter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: typescript-api-starter
+  template:
+    metadata:
+      labels:
+        app: typescript-api-starter
+    spec:
+      containers:
+        - name: typescript-api-starter
+          image: typescript-template:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: MONGO_URI
+              value: mongodb://mongo:27017/typescript-api-starter
